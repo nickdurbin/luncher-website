@@ -1,125 +1,192 @@
-h2 {
-  font-size: 5rem;
-  font-weight: 600;
-  text-align: center;
-  width: 100%;
-}
-
-h3 {
-  font-size: 2.2rem;
-  font-weight: 600;
-  margin: 0 auto;
-}
-
-p {
-  font-size: 1.8rem;
-  margin: 0 auto;
-}
-
-hr {
-  width:  75%;
-  border-top: 4px solid black;
-}
-
-/* About Section */
-.about-section {
-  width: 100%;
-
-  .about-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 100%;
-  
-    .about-header {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      width: 100%;
-    }
-
-    .about-text {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 100%;
-      padding: 1% 4%;
-    }
-  }
-}
-/* Start of the Meet the Team Section */
-.meet-section {
+// Landing image and content with animations using GSAP
+.hero-section {
   display: flex;
-  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+
+  .hero {
+    position: relative;
+    height: 90%;
+    width: 100%;
+  }
+  
+  .hero::after {
+    content: "";
+    background: black;
+    opacity: 0.3;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  
+  .hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .headline {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    font-size: 10rem;
+    transform: translate(-5%, -50%);
+    color: white;
+    z-index: 3;
+    font-weight: 600;
+
+    @media @mobile {
+      top: 50%;
+      font-size: 7.5rem;
+    }
+  }
+}
+
+// Slider for the visual effect of the hero image
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 100vh;
+  z-index: -1;
+}
 
-  .meet-top {
+// Lower Content Prelude to Testimonials
+.lower-about-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  background: @rightColor;
+
+  .test-container {
+    position: relative;
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    width: 100%;
-    margin: 15px 0;
-  }
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 900px;
+    height: 600px;
+    background: #fff;
+    margin: 20px;
 
-  .meet-bottom {
-    display: flex;
-    flex: row;
-    justify-content: space-evenly;
-    width: 100%;
-    margin: 15px 0;
-  }
+    @media @tablet {
+      height: auto;
+    }
 
-/* Styling for the cards */
-  .meet-card {
-    width: 28%;
-    height: 325px;
-    border: 1px solid grey;
-    border-radius: 5px;
-    box-shadow: 5px 0 5px #979797;
+    .test-img {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+      height: 100%;
+      background: @leftColor;
 
-    .meet-card:hover {
-      transform: scale(1.05);
-    
-      .card-img-container {
+      @media @tablet {
+        padding: 40px;
         width: 100%;
-        height: 60%;
-        padding: 2% 1% 0 2%;
+        height: auto;
+        text-align: center;
+        overflow: hidden;
+      }
 
-        .card-img {
-          width: 100%;
-          height: 100%;
-          border-radius: 5px;
-        }
+      img {
+        position: relative;
+        width: 700px;
+        left: -20%;
 
-        .card-text {
-          width: 100%;
-          height: 40%;
-          text-align: center;
+        @media @tablet {
+          left: initial;
+          max-width: 100%;
         }
       }
     }
-  }
-}
 
-/* Font Awesome Icons */
-.fa {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin: 5px 0;
+    .test-img:before {
+      content: 'GIVE';
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      color: #000;
+      opacity: .1;
+      font-size: 9rem;
+      font-weight: 800;
 
-  a {
-    text-decoration: none;
-  }
+      @media @tablet {
+        color: #fff;
+        opacity: .5;
+        z-index: 1;
+      }
+    }
 
-  .fab {
-    margin: 0 10px;
-    cursor: pointer;
-    color: black;
-  }
+    .test-img:after {
+      content: 'BACK';
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      color: #000;
+      opacity: .1;
+      font-size: 9rem;
+      font-weight: 800;
 
-  .fa:hover {
-    transform: scale(1.05);
+      @media @tablet {
+        color: #fff;
+        opacity: .5;
+        z-index: 1;
+      }
+    }
+      
+    .test-details {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+      height: 100%;
+      padding: 40px;
+
+      @media @tablet {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+      }
+
+      .test-details h2 {
+        margin: 0;
+        padding: 0;
+        font-size: 2.5rem;
+        line-height: 0.8em;
+        color: #444;    
+      }
+
+      .test-details p {
+        max-width: 85%;
+        margin-left: 15%;
+        color: #333;
+        font-size: 1.5rem;
+
+        @media @tablet {
+          max-width: 100%;
+          margin-left: 0;
+        }
+      }
+
+      .test-btn {
+        .buttonStyle("", "", #fff, @leftColor, none, 40px, pointer, 1.6rem);
+        box-shadow: none;
+        padding: 15px 20px;
+        margin-top: 5px;
+        letter-spacing: 1px;
+        font-weight: 600;
+        float: right;
+      }
+
+      .test-btn:hover {
+        transform: scale(1.1);
+      }
+    }
   }
 }

@@ -2,83 +2,145 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="./css/reset.css" />
-    <link rel="stylesheet" href="./css/index.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,700&display=swap" rel="stylesheet">
-    <title>Luncher- Contact</title>
+    <link rel="stylesheet" href="node_modules/bulma/css/bulma.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Quicksand:400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Luncher-About</title>
   </head>
   <body>
     <header>
-      <nav>
-        <div class="logo-container">
-          <a href="index.html"><img class="logo" src="./src/logo.png" alt="Luncher logo."></a>
-        </div>
-
-        <div class="hamburger">
-          <div class="line"></div>
-          <div class="line1"></div>
-          <div class="line2"></div>
-        </div>
-
-        <ul class="nav-links">
-          <li><a class="nav-a" href="index.html">Home</a></li>
-          <li><a class="nav-a" href="/projects.html">Projects</a></li>
-          <li><a class="nav-a" href="/about.html">About</a></li>
-          <li><a class="nav-a" href="/contact.html">Contact</a></li>
-        </ul>
+      <nav class="level">
+        <p class="level-item has-text-centered">
+          <a class="link is-link" href="/index.html"><strong>Home</strong></a>
+        </p>
+        <p class="level-item has-text-centered">
+          <a class="link is-link" href="/about.html"><strong>About</strong></a>
+        </p>
+        <p class="level-item has-text-centered">
+          <img
+            src="src/logo.png"
+            alt="logo"
+            style="height: 40px; width: auto;"
+          />
+        </p>
+        <p class="level-item has-text-centered">
+          <a class="link is-link" href="/testimonials.html"
+            ><strong>Testimonials</strong></a
+          >
+        </p>
+        <p class="level-item has-text-centered">
+          <a class="link is-link" href="/contact.html"
+            ><strong>Contact</strong></a
+          >
+        </p>
       </nav>
     </header>
 
-    <footer>
+    <section class="contact-form">
 
-        <div class="footer-ul">
-          <ul>
-            <li><a class="footer-a" href="index.html">Home</a></li>
-            <li><a class="footer-a" href="/projects.html">Projects</a></li>
-            <li><a class="footer-a" href="/about.html">About</a></li>
-            <li><a class="footer-a" href="/contact.html">Contact</a></li>
-          </ul>
-
-          <div class="fa">
-            <a href="https://github.com/" target="_blank">
-            <i class="fab fa-github-square fa-3x"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/" target="_blank">
-            <i class="fab fa-linkedin fa-3x"></i>
-            </a>
-            <a href="https://www.twitter.com/" target="_blank">
-              <i class="fab fa-twitter fa-3x"></i>
-            </a>
+      <!-- Layout for the Address section. -->
+      <div class="address-background">
+        <div class="address-container">
+          <div class="address">
+            <img class='contact-img' src='src/logo.png'>
+            <p>
+              1234 Luncher Drive<br />
+              Chicago, IL 83245<br />
+              United States<br />
+              <br />
+              email: luncherapp1@gmail.com
+            </p>
           </div>
-  
-          <ul>
-            <li><a class="footer-a" href="#">Terms</a></li>
-            <li><a class="footer-a" href="#">Services</a></li>
-            <li><a class="footer-a" href="#">Legal</a></li>
-            <li><a class="footer-a" href="#">Resources</a></li>
-          </ul>
-  
         </div>
-  
-        <div class="copyright">
-          <p>Copyright Luncher 2019</p>
+      </div>
+
+      <!-- Layout for the Contact form section -->
+      <div class="contact-container"> 
+        <div class="contact-content">
+          <h1>Contact Luncher</h1>
+          <form action="https://formspree.io/luncherapp1@gmail.com" method="POST" >
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your first name..">
+        
+            <label for="lname">Last Name:</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+            <label for="email">Email Address:</label>
+            <input type="text" id="email" name="email" placeholder="Your email..">
+        
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" placeholder="Write something.."></textarea>
+        
+            <input type="submit" value="Submit">
+          </form>
         </div>
-  
-      </footer>
-  
-      <script
-        src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"
-        integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U="
-        crossorigin="anonymous"
-      ></script>
-      <script
-        src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"
-        integrity="sha256-fIkQKQryItPqpaWZbtwG25Jp2p5ujqo/NwJrfqAB+Qk="
-        crossorigin="anonymous"
-      ></script>
-      <script src="index.js"></script>
-    </body>
-  </html>
+      </div>
+    </section>
+
+    <!-- Footer section -->
+    <footer>
+      <div class="footer-ul">
+        <ul>
+          <li><a class="footer-a" href="/index.html">Home</a></li>
+          <li><a class="footer-a" href="/projects.html">Projects</a></li>
+          <li><a class="footer-a" href="/about.html">About</a></li>
+          <li>
+            <a class="footer-a" href="/testimonials.html">Testimonials</a>
+          </li>
+          <li><a class="footer-a" href="/contact.html">Contact</a></li>
+        </ul>
+
+        <div class="social-icons">
+          <a href="https://github.com/build-week-luncher-app" target="_blank">
+            <img
+              class="icons"
+              height="32"
+              width="32"
+              src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/github.svg"
+            />
+          </a>
+          <a
+            href="https://www.linkedin.com/company/luncher-app/"
+            target="_blank"
+          >
+            <img
+              class="icons"
+              height="32"
+              width="32"
+              src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/linkedin.svg"
+            />
+          </a>
+          <a href="http://www.twitter.com/theluncherapp" target="_blank">
+            <img
+              class="icons"
+              height="32"
+              width="32"
+              src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/twitter.svg"
+            />
+          </a>
+        </div>
+
+        <ul>
+          <li><a class="footer-a" href="/terms.html">Terms</a></li>
+          <li><a class="footer-a" href="/services.html">Services</a></li>
+          <li><a class="footer-a" href="#">Legal</a></li>
+          <li><a class="footer-a" href="#">Resources</a></li>
+          <li><a class="footer-a" href="/blog.html">Blog</a></li>
+        </ul>
+      </div>
+
+      <div class="copyright">
+        <p>Copyright Luncher 2019</p>
+      </div>
+    </footer>
+
+  </body>
+</html>

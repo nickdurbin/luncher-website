@@ -1,17 +1,30 @@
-nav {
-  height: 10vh;
-
-  @media @navChange {
-    height: 25vh;
-    margin-top: 3%;
-  }
-
-  @media @mobileHeight {
-    height: 40%;
-  }
-
-  .is-link {
+a {
     font-weight: 700;
-    font-size: 2rem;
-  }
+    color: @blue;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+
+
+
+     @media(max-width: 1000px) {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    @media (max-width: 900px) {
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    p a{
+        color:#1456A3;
+        text-decoration-line: none;
+    }
+
 }

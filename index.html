@@ -1,60 +1,74 @@
 <html>
-    <head>
-       <meta charset="UTF-8" />
-       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-       <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-       <title>Luncher Home</title>
-       <link rel="stylesheet" href="/CSS/index.css">
-       
-
-    </head>
-    <body>
-        <section class=heading>
-
-            <nav id=navi>
-
-                <p class="level-item has-text-centered" style = margin-left:1%;>
-                  <a class="link is-link" href="/index.html"><strong>Home</strong></a>
-                </p>
-                <p class="level-item has-text-centered">
-                    <a class="link is-link" href="/about.html"><strong>About</strong></a>
-                </p>
-                <p class="level-item has-text-centered">
-                    <img src="img/logo.png" alt="logo" style="height: 40px; width: auto;">
-                </p>
-                <p class="level-item has-text-centered">
-                    <a class="link is-link" href="/testimonials.html"><strong>Testimonials</strong></a>
-                </p>
-                <p class="level-item has-text-centered" style = margin-right:1%;>
-                    <a class="link is-link" href="/contact.html"><strong>Login</strong></a>
-                </p>
-            </nav>
-        </section>    
-        <section class="welcome">
-            <h2 class="welcometo">Welcome to Luncher</h2>
-            <button class="btn">Find out more here</button>
-        </section>
-        <section class="middle">
-            <div id="info1">
-                <img class="image1" src ="img/LunchEatery.jpg">
-                <p>Studies have shown that hunger negatively impacts a childs health and their ability to focus. Hunger can also cause fatigue and low energy levels. </p>  
-            </div>
-            <div id="info2">
-                <p>Hunger is a wide spread epidemic, especially in children. This epidemic can be quelled with special programs such as Luncher.</p>
-                <img src="img/Boy-Eating.jpg">
-            </div>
-        </section>
-        <section id="tag">
-            <div>No child left hungry, No child left behind</div>
-        </section>
-        <!-- FOOTER -->
-  <footer>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Luncher - Home</title>
+    <link rel="stylesheet" href="node_modules/bulma/css/bulma.css">
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+    <div class="main-page-wrapper">
+    <section class="heading">
+      <nav class="level">
+        <p class="level-item has-text-centered" style="margin-left:1%;">
+          <a class="link is-link" href="/index.html"><strong>Home</strong></a>
+        </p>
+        <p class="level-item has-text-centered">
+          <a class="link is-link" href="/about.html"><strong>About</strong></a>
+        </p>
+        <p class="level-item has-text-centered">
+          <img
+            src="img/logo.png"
+            alt="logo"
+            style="height: 40px; width: auto;"
+          />
+        </p>
+        <p class="level-item has-text-centered">
+          <a class="link is-link" href="/testimonials.html"
+            ><strong>Testimonials</strong></a
+          >
+        </p>
+        <p class="level-item has-text-centered" style="margin-right:1%;">
+          <a class="link is-link" href="https://luncherapp.netlify.com/"
+            ><strong>Login</strong></a
+          >
+        </p>
+      </nav>
+    </section>
+    <section class="welcome">
+      <h2 class="welcometo">Welcome to Luncher</h2>
+      <a href="about.html"><button class="btn">Find out more here</button></a>
+    </section>
+    <section class="middle">
+      <div id="info1">
+        <img class="image1" src="img/LunchEatery.jpg" />
+        <p>
+          Studies have shown that hunger negatively impacts a childs health and
+          their ability to focus. Hunger can also cause fatigue and low energy
+          levels.
+        </p>
+      </div>
+      <div id="info2">
+        <p>
+          Hunger is a wide spread epidemic, especially in children. This
+          epidemic can be quelled with special programs such as Luncher.
+        </p>
+        <img src="img/Boy-Eating.jpg" />
+      </div>
+    </section>
+    <section id="tag">
+      <div>No child left hungry, No child left behind</div>
+    </section>
+    <!-- FOOTER -->
+    <footer>
       <div class="footer-ul">
         <ul>
           <li><a class="footer-a" href="/index.html">Home</a></li>
-          <li><a class="footer-a" href="/projects.html">Projects</a></li>
           <li><a class="footer-a" href="/about.html">About</a></li>
-          <li><a class="footer-a" href="/testimonials.html">Testimonials</a></li>
+          <li>
+            <a class="footer-a" href="/testimonials.html">Testimonials</a>
+          </li>
           <li><a class="footer-a" href="/contact.html">Contact</a></li>
         </ul>
 
@@ -90,19 +104,18 @@
 
         <ul>
           <li><a class="footer-a" href="/terms.html">Terms</a></li>
-          <li><a class="footer-a" href="">Services</a></li>
-          <li><a class="footer-a" href="#">GitHub</a></li>
+          <li><a class="footer-a" href="https://luncherapp.netlify.com/">Donate</a></li>
           <li><a class="footer-a" href="/resources.html">Resources</a></li>
           <li><a class="footer-a" href="/blog.html">Blog</a></li>
         </ul>
       </div>
 
       <div class="copyright">
-        <p>&copy; 2019 Luncher</p>
+        <p>Luncher - Copyright &copy 2019 </p>
       </div>
     </footer>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
-    <script src="javascript/main.js"></script>
-        
-    </body>
+    <script src="javascript/index.js"></script>
+  </body>
 </html>
